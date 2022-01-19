@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 응용</title>
+    <style>
+        html,body {
+            margin:0;
+            padding:0;
+            font-family:sans-serif;
+        }
+        ul, li {
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+        a {
+            color:#252525;
+        }
+        a:link {
+            text-decoration:none;
+        }
+        .logo_wrap {
+            width:900px;
+            margin:50px auto 20px;
+        }
+        .menu_fix {
+            width: 100%;
+            height:60px;
+            background:#3d3d3d;
+        } 
+        .menu_fix .menu_wrap {
+            display:flex;
+            width:900px;
+            height:60px;
+            margin:0 auto;
+            align-items:center;
+        }
+        .menu_fix .left_menu {
+            width:216px;
+            height:60px;
+            background:#252525;
+        }
+        .menu_fix .left_menu span {
+            line-height:60px;
+            padding-left:30px;
+            color:#fff;
+            font-family:sans-serif;
+        }
+        .menu_fix .left_menu .categoryMenu {
+            position: relative;
+            background: rgba(255,255,255,0.8);
+            border-top: 0;
+            border: 1px solid #E9E9E9;
+            height: 430px;
+        }
+        .menu_fix .left_menu .categoryMenu .menu-dp1 > li > a {
+            display: block;
+            padding: 0 15px 0 24px;
+            height: 48px;
+            line-height: 46px;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: -1px;
+            color: #242424;
+        }
+        .menu_fix .menu-dp-wrap {
+            position: absolute;
+            top: -1px;
+            left: 100%;
+            width:656px;
+            height: 432px;
+            overflow: hidden;
+            padding: 22px 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+        .menu_fix .menu-dp-wrap h3 {
+            padding-left:24px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #242424;
+        }
+        .menu_fix .menu-dp-wrap .menu-dp2 {
+            display: flex;
+            flex-flow: column wrap;
+            height: 94%;
+        }
+        .menu_fix .menu-dp-wrap .menu-dp2 > li {
+            margin-top: 24px;
+            min-width: 266px;
+            padding: 0 24px;
+        }
+        .menu_fix .right_menu {
+            width:622px;
+            height:60px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .menu_fix .right_menu li {
+            font-size:16px;
+            color:#fff;
+            padding:0 12px;
+        }
+    </style>
+</head>
+<body>
+	<header>
+        <div class="logo_wrap"><img src="img/logo.jpg" width="207"></div>
+        <div class="menu_fix">
+            <div class="menu_wrap">
+                <div class="left_menu">
+                    <span>전체 카테고리</span>
+                    <div class="categoryMenu">
+                        <ul class="menu-dp1">
+                            <li>
+                                <a href="">의료소모품</a>
+                                <div class="menu-dp-wrap menu-dp-m">
+                                    <h3>의료소모품</h3>
+                                    <ul class="menu-dp2">
+                                        <li>
+                                            <a href="">주사기/주사침/나비침</a>
+                                        </li>
+                                        <li>
+                                            <a href="">거즈/붕대/솜/스타키넷</a>
+                                        </li>
+                                        <li>
+                                            <a href="">반창고/테이프/밴드</a>
+                                        </li>
+                                        <li>
+                                            <a href="">캐스트/스프린트/보호대</a>
+                                        </li>
+                                        <li>
+                                            <a href="">멸균/소독약품/소독제</a>
+                                        </li>
+                                        <li>
+                                            <a href="">수액용품/카테터/tube</a>
+                                        </li>
+                                        <li>
+                                            <a href="">진단키트류/페이퍼</a>
+                                        </li>
+                                        <li>
+                                            <a href="">봉합사/봉합침</a>
+                                        </li>
+                                        <li>
+                                            <a href="">린넨/마스크/글러브/수술복</a>
+                                        </li>
+                                        <li>
+                                            <a href="">트레이/스텐용기/카트</a>
+                                        </li>
+                                        <li>
+                                            <a href="">마취/응급용품</a>
+                                        </li>
+                                        <li>
+                                            <a href="">물리치료/재활용품</a>
+                                        </li>
+                                        <li>
+                                            <a href="">한방용품</a>
+                                        </li>
+                                        <li>
+                                            <a href="">치과</a>
+                                        </li>
+                                        <li>
+                                            <a href="">반려동물등록</a>
+                                        </li>
+                                        <li>
+                                            <a href="">기타</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="">의료장비</a></li>
+                            <li><a href="">의료장비 소모품</a></li>
+                            <li><a href="">기구류</a></li>
+                            <li><a href="">사료</a></li>
+                            <li><a href="">간식</a></li>
+                            <li><a href="">용품</a></li>
+                            <li><a href="">고양이</a></li>
+                            <li><a href="">비품/소모품</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="right_menu">
+                    <li>의료장비렌탈</li>
+                    <li>공지사항</li>
+                    <li>상품요청</li>
+                    <li>베스트상품</li>
+                    <li>신상품</li>
+                    <li>특가상품</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
